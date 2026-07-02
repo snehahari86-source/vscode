@@ -328,7 +328,7 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 
 	async syncSystemWideKeybindings(windowId: number | undefined, keybindings: INativeSystemWideKeybinding[]): Promise<INativeSystemWideKeybindingResult> {
 		if (typeof windowId !== 'number') {
-			return { failed: [], showFirstRunNotice: false };
+			return { failed: [] };
 		}
 		return this.globalKeybindingsMainService.updateKeybindings(windowId, keybindings);
 	}
